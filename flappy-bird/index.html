@@ -4,12 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Flappy Bird</title>
   </head>
+
   <body>
-    <div id="app">
-      <h1>good boy</h1>
+
+    <div id="main">
+      <div id="bird">
+        <img id="movingBird" src="./Pictures/Flappy grumpy bird/movingBird.gif" alt="moving blue bird"/>
+      </div>
+
+      <div id="pair1">
+        <img id="clawDownLong" class="claws" src="./Pictures/Flappy grumpy bird/Claws/clawDownLong.png" alt="long monster claws pointing down"/>
+        <img id="clawUpShort" class="claws" src="./Pictures/Flappy grumpy bird/Claws/clawUpShort.png" alt="short monster claws pointing up"/>
+      </div>
+      
+      <div id="pair2">
+        <img id="clawDownShort" class="claws" src="./Pictures/Flappy grumpy bird/Claws/clawDownShort.png" alt="short monster claws pointing down"/>
+        <img id="clawUpLong" class="claws" src="./Pictures/Flappy grumpy bird/Claws/clawUpLong.png" alt="long monster claws pointing up"/>
+      </div>
     </div>
+
+
     <script type="module" src="/main.js"></script>
   </body>
+
 </html>

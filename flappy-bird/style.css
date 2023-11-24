@@ -1,0 +1,50 @@
+body {
+  background-image: url("./Pictures/Flappy\ grumpy\ bird/cartoonNightSky.png");
+  background-size: 100% 100%;
+}
+
+#main {
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#movingBird {
+  height: 6rem;
+  width: 5.5rem;
+}
+
+.claws {
+  height: 20rem;
+}
+
+#clawDownLong , #clawUpLong {
+  height: 30rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .pair1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.pair2 {
+  display: flex;
+  flex-direction: column;
+} */
+
+
+  /* background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: center; */
