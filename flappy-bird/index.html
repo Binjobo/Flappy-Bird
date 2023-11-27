@@ -5,13 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Cedarville+Cursive&family=Press+Start+2P&family=Roboto:ital,wght@1,300&family=Tangerine&display=swap" rel="stylesheet">
     <title>Flappy Bird</title>
   </head>
 
-  <body>
-    <!-- <div id="invisibleBox1"></div>
-    <div id="invisibleBox2"></div> -->
-    
+  <body>    
+
+    <div id="gameOver">
+      <h1 id="gameOverText">GAMEOVER</h1>
+      <button id="restart"><span>RESTART</span></button>
+    </div>
+
+
+    <div id="start">
+      <h1 id="instructionText1">Click screen to start</h1>
+      <h2 id="instructionText2">Press W or Spacebar to move up</h2>
+    </div>
+
     <img id="movingBird" src="./Pictures/Flappy grumpy bird/movingBird.gif">
 
     <div id="allClawPairs">
@@ -26,13 +38,16 @@
       </div>
   
       <div id="pair3">
-        <img id="clawDownLong" class="claws long set3" src="./Pictures/Flappy grumpy bird/Claws/clawDownLong.png" alt="long monster claws pointing down"/>
+        <img id="clawDownLong" class="claws long set1" src="./Pictures/Flappy grumpy bird/Claws/clawDownLong.png" alt="long monster claws pointing down"/>
       </div>
   
-      <div id="pair4">
+      <div class="container">
         <div id="invisibleFiller"></div>
-        <img id="clawUpLong" class="claws long set2" src="./Pictures/Flappy grumpy bird/Claws/clawUpLong.png" alt="long monster claws pointing up"/>
+        <div id="pair4">
+          <img id="clawUpLong" class="claws long set2" src="./Pictures/Flappy grumpy bird/Claws/clawUpLong.png" alt="long monster claws pointing up"/>
+        </div>
       </div>
+
     </div>
 
 

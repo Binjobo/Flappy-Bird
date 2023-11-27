@@ -1,23 +1,71 @@
 body {
-  background-color: green;
+  background-color: black;
   height: 100vh;
   background-image: url("./Pictures/Flappy\ grumpy\ bird/cartoonNightSky.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-/* #invisibleBox1 {
-  height: 600px;
-  width: 600px;
-  background-color: blue;
-} */
+#gameOver {
+  font-size: 3.4rem;
+  color: white;
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: black;
+  position: absolute;
+  margin-left: 27%;
+  margin-top: 21%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#gameOverText {
+  margin: 0;
+}
+
+button {
+  width: 10rem;
+  height: 3.5rem;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  color: white;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+#start {
+  font-family: Agbalumo;
+  font-size: 2rem;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  position: absolute;
+  margin-left: 26.5%;
+  margin-top: 19%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#instructionText1 {
+  margin: 0;
+}
+
+#instructionText2 {
+  margin: 0;
+}
+
 
 #movingBird {
   height: 5rem;
   width: 5rem;
   position: absolute;
-  margin-left: 25%;
-  margin-top: 20%;
+  margin-left: 23.5%;     /* originally 25% */
+  margin-top: 20%;       /* originally 20% */
 }
 
 #pair1 {
@@ -30,17 +78,19 @@ body {
   width: 21%;
   margin-left: 100%;
 }
-#clawUpShort {
-  height: 18rem;
-  width: 100%;
-  margin-top: 35%;
-}
 
 #clawDownLong {
   height: 22rem;
   width: 100%;
-  margin-bottom: 25%;
+  /* margin-bottom: 25%; */
 } 
+
+#clawUpShort {
+  height: 18rem;
+  width: 100%;
+  margin-top: 70%;
+  margin-bottom: -20px;
+}
 
 #pair2 {
   position: absolute;
@@ -56,23 +106,26 @@ body {
 #clawDownShort {
   height: 18rem;
   width: 100%;
-  margin-bottom: 55%;
+  margin-bottom: 90%;
 }
 
 #clawUpLong {
   height: 22rem;
   width: 100%;
-  margin-top: 25%;
+  margin-bottom: -20px;
+  /* margin-top: 25%; */
 } 
 
 #pair3 {
   position: absolute;
-  height: 100vh;
-  width: 25%;
+  height: 48vh;     /* previously 100vh */
+  width: 25%; 
   margin-left: 210%;
 }
 
-#pair4 {
+
+
+.container {
   position: absolute;
   height: 100vh;
   display: flex;
@@ -83,12 +136,33 @@ body {
   margin-left: 260%;
 }
 
-#invisibleFiller {
-  height: 18rem;
+/* #invisibleFiller {
+  height: 80rem;
   width: 100%;
-  margin-bottom: 55%;
+  margin-bottom: 90%;
+} */
+
+
+#pair4 {
+  position: absolute;
+  /* previously height: 100vh */
+  width: 100%; 
+  margin-left: 260%;
 }
+
 
 #allClawPairs {
   position: relative;
+  /* background-color: purple; */
+}
+
+
+
+/* test */
+#rect1 {
+  background: red;
+  width: 320px;
+  height: 320px;
+  display: inline-block;
+  position: absolute;
 }
