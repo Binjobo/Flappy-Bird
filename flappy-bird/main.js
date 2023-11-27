@@ -30,6 +30,8 @@ startScreen.style.display = "block";
 const gameOverScreen = document.querySelector("#gameOver");
 gameOverScreen.style.display = "none";
 
+const startOverButton = document.querySelector("#restart");
+
 /*----- event listeners -----*/
 gameScreen.addEventListener("click", gameStart);
 gameScreen.addEventListener("keydown", gameStart);
@@ -38,6 +40,8 @@ gameScreen.addEventListener("keydown", moveClawsLeftKey);
 gameScreen.addEventListener("keydown", moveClawsRightKey);
 
 gameScreen.addEventListener("keydown", moveUpKey);
+
+startOverButton.addEventListener("click", startOver);
 
 /*----- functions -----*/
 
@@ -214,8 +218,6 @@ function checkCollision6() {
 }
 
 function checkAllCollisions() {
-    // console.log(bird.getBoundingClientRect);
-    console.log(bird.offsetTop);
     if (
         bird.offsetTop >= 640 ||    //when the bird touches the ground
         checkCollision1() === true ||
@@ -225,9 +227,13 @@ function checkAllCollisions() {
         checkCollision5() === true ||
         checkCollision6() === true
     ) {
-        console.log("Oh yeahhhh");
+        // console.log("Oh yeahhhh");
         // document.querySelector("body").innerHTML = "Gameover!"
         gameOverScreen.style.display = "block";
+
+        // startOver();
+
+
         function disableMoveUpKey(e) {
             if (e.keyCode === 87 || e.code === "Space") {
                 yAxis += 30;
@@ -237,15 +243,7 @@ function checkAllCollisions() {
     }
 }
 
-
-
-
-
 //function for points
-
-// function for renderGameover
-
-// function for restartButton
 
 
 //start game
@@ -263,3 +261,10 @@ function gameStart() {
 // function disableMove() {
 //     gameOver = true;
 // }
+
+
+function startOver() {
+    started = false;
+    // gameStart()
+    console.log("Restart Game"); 
+}

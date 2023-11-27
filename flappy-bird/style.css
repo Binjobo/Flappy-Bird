@@ -150,19 +150,11 @@ button {
   margin-left: 260%;
 }
 
-
 #allClawPairs {
   position: relative;
   /* background-color: purple; */
 }
 
-
-
-/* test */
-#rect1 {
-  background: red;
-  width: 320px;
-  height: 320px;
-  display: inline-block;
-  position: absolute;
+button:hover {
+  cursor: pointer;
 }
