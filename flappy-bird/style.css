@@ -1,109 +1,94 @@
 body {
+  background-color: green;
+  height: 100vh;
   background-image: url("./Pictures/Flappy\ grumpy\ bird/cartoonNightSky.png");
-  background-size: 100% 100%;
-  height: 100vh;
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: 100% 100%;
 }
 
-.container {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-}
-
+/* #invisibleBox1 {
+  height: 600px;
+  width: 600px;
+  background-color: blue;
+} */
 
 #movingBird {
   height: 5rem;
-  width: 4.5rem;
-  grid-area: 3 / 3 / 4 / 3;
+  width: 5rem;
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 20%;
 }
 
-.short {
-  height: 15rem;
-  width: 17rem;
+#pair1 {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  align-items: end;
+  width: 21%;
+  margin-left: 100%;
 }
-
-#clawDownLong , #clawUpLong {
-  height: 21rem;
-  width: 18rem;
+#clawUpShort {
+  height: 18rem;
+  width: 100%;
+  margin-top: 35%;
 }
 
 #clawDownLong {
-  grid-area: 1 / 7 / 3 / 9;
-}
+  height: 22rem;
+  width: 100%;
+  margin-bottom: 25%;
+} 
 
-#clawUpShort {
-  grid-area: -1 / 7 / -3 / 9;
+#pair2 {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  align-items: end;
+  width: 21%;
+  margin-left: 160%;
 }
 
 #clawDownShort {
-  grid-area: 1 / 4 / 3 / 6;
+  height: 18rem;
+  width: 100%;
+  margin-bottom: 55%;
 }
 
 #clawUpLong {
-  grid-area: 6 / 4 / 9 / 6;
-}
-
-button {
-  grid-area: 3 / 5 / 4 / 6;
-  align-items: center;
-  font-weight: bold;
-  font-size: 2.5rem;
-  border-radius: 15px;
-  border: solid black .2rem;
-  /* font-style: italic; */
-}
-
-
-/* body {
-  margin: 0;
-  background-image: url("./Pictures/Flappy\ grumpy\ bird/cartoonNightSky.png");
-  background-size: 100% 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#main {
-  height: 100vh;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 22rem;
+  width: 100%;
+  margin-top: 25%;
 } 
 
-#movingBird {
-  height: 6rem;
-  width: 5.5rem;
+#pair3 {
+  position: absolute;
+  height: 100vh;
+  width: 25%;
+  margin-left: 210%;
 }
 
-.short {
-  height: 20rem;
-}
-
-#clawDownLong , #clawUpLong {
-  height: 30rem;
-}
-
-.pair1 {
+#pair4 {
+  position: absolute;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content:end;
+  align-items: end;
+  width: 25%;
+  margin-left: 260%;
 }
 
-.pair2 {
-  display: flex;
-  flex-direction: column;
-} */
+#invisibleFiller {
+  height: 18rem;
+  width: 100%;
+  margin-bottom: 55%;
+}
 
-
+#allClawPairs {
+  position: relative;
+}
