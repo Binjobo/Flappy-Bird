@@ -243,6 +243,27 @@ function checkAllCollisions() {
     }
 }
 
+
+
+function clawsAutoMoveRight() {
+    function moveRight() {
+        if (xAxis <= -4000) {
+            clearInterval(shiftRightSpeed);
+            allClaws.style.left = 0;
+            xAxis = 0;
+        } else {
+            xAxis += 5;
+            allClaws.style.left = xAxis + 'px';
+        }
+    }
+    const shiftRightSpeed = setInterval(moveRight, 15);
+}
+
+
+
+
+
+
 //function for points
 
 
