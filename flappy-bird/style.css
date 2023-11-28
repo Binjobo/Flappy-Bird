@@ -1,7 +1,7 @@
 body {
   background-color: black;
   height: 100vh;
-  background-image: url("./Pictures/Flappy\ grumpy\ bird/cartoonNightSky.png");
+  background-image: url("./public/cartoonNightSky.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }

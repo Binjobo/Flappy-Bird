@@ -230,34 +230,36 @@ function checkAllCollisions() {
         // console.log("Oh yeahhhh");
         // document.querySelector("body").innerHTML = "Gameover!"
         gameOverScreen.style.display = "block";
+        // started = false;
+        // startScreen.style.display = "none";
 
         // startOver();
 
 
-        function disableMoveUpKey(e) {
-            if (e.keyCode === 87 || e.code === "Space") {
-                yAxis += 30;
-                bird.style.top = yAxis + "px";
-            }
-        }
+        // function disableMoveUpKey(e) {
+        //     if (e.keyCode === 87 || e.code === "Space") {
+        //         yAxis += 30;
+        //         bird.style.top = yAxis + "px";
+        //     }
+        // }
     }
 }
 
 
 
-function clawsAutoMoveRight() {
-    function moveRight() {
-        if (xAxis <= -4000) {
-            clearInterval(shiftRightSpeed);
-            allClaws.style.left = 0;
-            xAxis = 0;
-        } else {
-            xAxis += 5;
-            allClaws.style.left = xAxis + 'px';
-        }
-    }
-    const shiftRightSpeed = setInterval(moveRight, 15);
-}
+// function clawsAutoMoveRight() {
+//     function moveRight() {
+//         if (xAxis <= -4000) {
+//             clearInterval(shiftRightSpeed);
+//             allClaws.style.left = 0;
+//             xAxis = 0;
+//         } else {
+//             xAxis += 5;
+//             allClaws.style.left = xAxis + 'px';
+//         }
+//     }
+//     const shiftRightSpeed = setInterval(moveRight, 15);
+// }
 
 
 
