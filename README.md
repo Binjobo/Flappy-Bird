@@ -1,11 +1,17 @@
 # Goal 
-Create a game of Flappy Bird using HTML, CSS and Javascript.
+**Create a game of Flappy Bird using HTML, CSS and Javascript.**
+
+<br>
 
 ## Game Description 
 A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanics of this project would be largely the same as how you would expect a fla ppy bird game would run. 
 
+<br>
+
 ## Game Blueprint
 ![image info](./flappy-bird/screenshots/Game%20Layout.png)
+
+<br>
 
 ## Minimum Viable Product (what I set out to achieve minimally)
 - The game is runnable with the background scene being able to scroll from right to left at a reasonable speed
@@ -19,25 +25,25 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 2. Create and edit the html and CSS file
 3. Create and edit the Javascript file
 
-## 1. Create the game objects
+## 1. Settle the art and game objects
 - Imported a free flappy bird sprite (https://opengameart.org/content/free-game-asset-grumpy-flappy-bird-sprite-sheets)
 - Used DALL-E to generate the art, and used Canva to modify the generated images.
 - Create a background image that has
-    1. Sky
-    2. Clouds
-    3. Cities
+    - Sky
+    - Clouds
+    - Cities
 - Created moving objects
-    1. Claws (the equivalent of Pipe obstacles)
+    - Claws (the equivalent of Pipe obstacles)
 
 ## 2. Create and edit the html and CSS file
-- Html
+**Html**
     1. Import in the background image
     2. Import in the moving objects (bird and claws)
     3. Group the objects in divs tag and gave them different IDs and Classes
-- CSS
+**CSS**
     1. For general coloring and positioning purpose only (the animation of the claws is done in Javascript instead)
 
-## Create and edit the Javascript file
+## 3. Create and edit the Javascript file
 **Game Architecture**
 - used the Model-View-Controller(MVC) approach
 - this is the general code compartments for how the game is run
@@ -57,6 +63,8 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
         - for start game
         - for restart game
 
+<br>
+
 ## How the game look like
 **Game Start Screenshot**
 ![image info](./flappy-bird/screenshots/GameStart%20Screen.png)
@@ -70,6 +78,8 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 1. Through the project, I have become more familiar of the MVC game architecture and start to appreciate how it makes code look much cleaner and organised.
 2. When encoutering errors and bugs, I have learnt to isolate the problem by commenting out the unnecessary parts and narrow down to the specific line or lines. I will analyse what purpose this line is trying to achieve, and then break it down to find out where it could have gone wrong syntactically or logically.
 3. Used setTimeout or setInterval for making asychronous events. Have a better understanding of how asychronous events work.
+
+<br>
 
 ## Future Improvements
 If there is more time I would hope to improve on or add in the following features:
