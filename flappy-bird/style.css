@@ -10,13 +10,29 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  margin-left: 1.2rem;
-  margin-top: 0.7rem;
+  margin-left: 1.3rem;
+  margin-top: 0.8rem;
   font-size: 3rem;
   display: block;
   position: absolute;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
+}
+
+#start {
+  font-family: Agbalumo;
+  font-size: 2rem;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  position: absolute;
+  margin-left: 26.5%;
+  margin-top: 19%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #gameOver {
@@ -48,20 +64,8 @@ button {
   -webkit-text-stroke-color: black;
 }
 
-#start {
-  font-family: Agbalumo;
-  font-size: 2rem;
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  position: absolute;
-  margin-left: 26.5%;
-  margin-top: 19%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+button:hover {
+  cursor: pointer;
 }
 
 #instructionText1 {
@@ -72,15 +76,15 @@ button {
   margin: 0;
 }
 
-
 #movingBird {
   height: 5rem;
   width: 5rem;
   position: absolute;
-  margin-left: 23.5%;     /* originally 25% */
-  margin-top: 20%;       /* originally 20% */
+  margin-left: 23.5%;     
+  margin-top: 20%;       
 }
 
+/* all claws */
 #pair1 {
   position: absolute;
   height: 100vh;
@@ -95,7 +99,6 @@ button {
 #clawDownLong {
   height: 22rem;
   width: 100%;
-  /* margin-bottom: 25%; */
 } 
 
 #clawUpShort {
@@ -126,7 +129,6 @@ button {
   height: 22rem;
   width: 100%;
   margin-bottom: -20px;
-  /* margin-top: 25%; */
 } 
 
 #pair3 {
@@ -135,8 +137,6 @@ button {
   width: 25%; 
   margin-left: 210%;
 }
-
-
 
 .container {
   position: absolute;
@@ -149,25 +149,13 @@ button {
   margin-left: 260%;
 }
 
-/* #invisibleFiller {
-  height: 80rem;
-  width: 100%;
-  margin-bottom: 90%;
-} */
-
-
 #pair4 {
   position: absolute;
-  /* previously height: 100vh */
   width: 100%; 
   margin-left: 260%;
 }
 
 #allClawPairs {
   position: relative;
-  /* background-color: purple; */
 }
 
-button:hover {
-  cursor: pointer;
-}

@@ -51,21 +51,20 @@ function moveUpKey(e) {
 
 function gravity() {
     function drop() {
-        if (yAxis >= window.innerHeight - 340) {
+        if (yAxis >= window.innerHeight - 340) { 
             clearInterval(dropSpeed); 
         } else {
             yAxis += 1;
             bird.style.top = yAxis + 'px';
         }
     }
-    const dropSpeed = setInterval(drop, 3);
-    //referenced chatGPT examples
+    const dropSpeed = setInterval(drop, 3);    
 }
 
 //claws
 function clawsAutoMoveLeft(callback) {
     function moveLeft() {
-        if (checkAllCollisions()) {               //YESSSSSSSSSSSSSSSSSSSSSSS!!!!!  
+        if (checkAllCollisions()) {              
             clearInterval(shiftLeftSpeed);
         } else if (xAxis <= -4000) {
             clearInterval(shiftLeftSpeed);
@@ -88,8 +87,7 @@ function repeatClawsRound(rounds) {
             clawsAutoMoveLeft(callback);
         }
     }
-    clawsAutoMoveLeft(callback);
-    //referenced chatGPT examples
+    clawsAutoMoveLeft(callback);     //referenced chatGPT examples
 }
 
 //collision
@@ -109,7 +107,7 @@ function checkCollision(bird, claws) {
 
 function checkAllCollisions() {
     if (
-        bird.offsetTop >= 640 ||    //when the bird touches the ground
+        bird.offsetTop >= 640 ||    
         checkCollision(bird, clawDownLong) ||
         checkCollision(bird, clawUpShort) ||
         checkCollision(bird, clawDownShort) ||
@@ -118,20 +116,25 @@ function checkAllCollisions() {
         checkCollision(bird, clawPair4)
     ) {
         gameOverScreen.style.display = "block";
+        console.log(bird.offsetTop);
+        console.log(window.innerHeight);   
         return true;
     }
 }
 
-scores
 function scoreCount() {
+    let scoreTimer;      //referenced chatGPT example
+    clearInterval(scoreTimer);
+
     function countingScore() {
         if (checkAllCollisions()) {
-            clearInterval(countingScore);
+            clearInterval(scoreTimer);
         } else {
             scores.innerText = parseInt(scores.innerText) + 1;
         }
     }
-    setInterval(countingScore, 1000);
+
+    scoreTimer = setInterval(countingScore, 1000);
 }
 
 //start game
@@ -156,7 +159,6 @@ function startOver() {
         bird.style.top = yAxis + "px";
         allClaws.style.left = 0;
         gameOverScreen.style.display = "none";
-        // startScreen.style.display = "block";
         scores.innerText = 0;
     }
 }
