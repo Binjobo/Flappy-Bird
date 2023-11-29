@@ -6,6 +6,19 @@ body {
   background-size: 100% 100%;
 }
 
+#score {
+  margin: 0;
+  padding: 0;
+  color: white;
+  margin-left: 1.2rem;
+  margin-top: 0.7rem;
+  font-size: 3rem;
+  display: block;
+  position: absolute;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
 #gameOver {
   font-size: 3.4rem;
   color: white;

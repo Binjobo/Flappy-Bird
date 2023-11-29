@@ -11,20 +11,7 @@
     <title>Flappy Bird</title>
   </head>
 
-  <body>    
-
-    <div id="start">
-      <h1 id="instructionText1">Click screen to start</h1>
-      <h2 id="instructionText2">Press W or Spacebar to move up</h2>
-    </div>
-
-    <div id="gameOver">
-      <h1 id="gameOverText">GAMEOVER</h1>
-      <button id="restart"><span>RESTART</span></button>
-    </div>
-
-    <img id="movingBird" src="./Pictures/Flappy grumpy bird/movingBird.gif">
-
+  <body>
     <div id="allClawPairs">
       <div id="pair1">
         <img id="clawDownLong" class="claws long set1" src="./Pictures/Flappy grumpy bird/Claws/clawDownLong.png" alt="long monster claws pointing down"/>
@@ -46,9 +33,23 @@
           <img id="clawUpLong" class="claws long set2" src="./Pictures/Flappy grumpy bird/Claws/clawUpLong.png" alt="long monster claws pointing up"/>
         </div>
       </div>
-
     </div>
 
+    <div>
+      <h1 id="score">Time Score: <span id="scoreNumbers">0</span></h1>
+    </div>
+
+    <img id="movingBird" src="./Pictures/Flappy grumpy bird/movingBird.gif">
+
+    <div id="start">
+      <h1 id="instructionText1">Click screen to start</h1>
+      <h2 id="instructionText2">Press W or Spacebar to move up</h2>
+    </div>
+
+    <div id="gameOver">
+      <h1 id="gameOverText">GAMEOVER</h1>
+      <button id="restart"><span>RESTART</span></button>
+    </div>
 
     <script type="module" src="main.js"></script>
   </body>
