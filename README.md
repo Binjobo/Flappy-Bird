@@ -39,7 +39,7 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 - HTML
     - Import in the background image
     - Import in the moving objects (bird and claws)
-    - Group the objects in divs tag and gave them different IDs and Classes
+    - Group the objects in div tags and gave them different IDs and Classes
 - CSS
     - For general coloring and positioning purpose only (the animation of the claws is done in Javascript instead)
 
