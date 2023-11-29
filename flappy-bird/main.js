@@ -122,6 +122,7 @@ function checkAllCollisions() {
     }
 }
 
+//score
 function scoreCount() {
     let scoreTimer;      //referenced chatGPT example
     clearInterval(scoreTimer);
