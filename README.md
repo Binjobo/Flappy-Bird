@@ -36,36 +36,36 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
     - Claws (the equivalent of Pipe obstacles)
 
 ## 2. Create and edit the html and CSS file
-**Html**
-    1. Import in the background image
-    2. Import in the moving objects (bird and claws)
-    3. Group the objects in divs tag and gave them different IDs and Classes
-**CSS**
-    1. For general coloring and positioning purpose only (the animation of the claws is done in Javascript instead)
+- HTML
+    - Import in the background image
+    - Import in the moving objects (bird and claws)
+    - Group the objects in divs tag and gave them different IDs and Classes
+- CSS
+    - For general coloring and positioning purpose only (the animation of the claws is done in Javascript instead)
 
 ## 3. Create and edit the Javascript file
-**Game Architecture**
-- used the Model-View-Controller(MVC) approach
-- this is the general code compartments for how the game is run
-    1. /*----- constants -----*/
-    2. /*----- state variables -----*/
-        - x position 
-        - y position
-    3. /*----- cached elements  -----*/
-        - create constants through document.querySelector the DOM objects
-    4. /*----- event listeners -----*/
-        - listens to click or keydown
-    5. /*----- functions -----*/
-        - functions for bird
-        - for claws
-        - for collision detection
-        - for score count
-        - for start game
-        - for restart game
+- Game Architecture
+    - used the Model-View-Controller(MVC) approach
+    - this is the general code compartments for how the game is run
+        1. /*----- constants -----*/
+        2. /*----- state variables -----*/
+            - x position 
+            - y position
+        3. /*----- cached elements  -----*/
+            - create constants through document.querySelector the DOM objects
+        4. /*----- event listeners -----*/
+            - listens to click or keydown
+        5. /*----- functions -----*/
+            - functions for bird
+            - for claws
+            - for collision detection
+            - for score count
+            - for start game
+            - for restart game
 
 <br>
 
-## How the game look like
+## How the game looks like
 **Game Start Screenshot**
 ![image info](./flappy-bird/screenshots/GameStart%20Screen.png)
 
