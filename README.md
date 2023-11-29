@@ -16,7 +16,7 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 ## Minimum Viable Product (what I set out to achieve minimally)
 - The game is runnable with the background scene being able to scroll from right to left at a reasonable speed
 - There is gravity that pulls the bird down continuously
-- Hitting an assigned keybord key allows the bird to be lifted in height to "stay afloat"
+- Tapping on Spacebar allows the bird to be lifted in height to "stay afloat"
 
 <br>
 
@@ -65,12 +65,14 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 
 <br>
 
-## How the game looks like
+## What the game looks like
 **Game Start Screenshot**
 ![image info](./flappy-bird/screenshots/GameStart%20Screen.png)
 
 **Game End Screenshot**
 ![image info](./flappy-bird/screenshots/GameOver%20Screen.png)
+
+You can try the game out at https://flappy-bird-bobby.vercel.app/ ~
 
 <br>
 
