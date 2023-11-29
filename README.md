@@ -57,8 +57,6 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
         - for start game
         - for restart game
 
-<br>
-
 ## How the game look like
 **Game Start Screenshot**
 ![image info](./flappy-bird/screenshots/GameStart%20Screen.png)
@@ -69,15 +67,15 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 <br>
 
 ## Key Learnings
-1. Through the project, I have become more familiar of the MVC game architecture and start to appreciate how it make my code look much cleaner and organised.
-2. When encoutering errors and bugs, I have learnt to comment out the unnecessary parts and narrow down the problem to the specific line or purpose it is trying to achieve.
-3. Used setTimeout or setInterval for making asychronous events.
+1. Through the project, I have become more familiar of the MVC game architecture and start to appreciate how it makes code look much cleaner and organised.
+2. When encoutering errors and bugs, I have learnt to isolate the problem by commenting out the unnecessary parts and narrow down to the specific line or lines. I will analyse what purpose this line is trying to achieve, and then break it down to find out where it could have gone wrong syntactically or logically.
+3. Used setTimeout or setInterval for making asychronous events. Have a better understanding of how asychronous events work.
 
 ## Future Improvements
-If there is more time I would to improve on or add in the following features:
+If there is more time I would hope to improve on or add in the following features:
 - Make the claws appear within the game screen, instead of having to park it to right of the game screen
 - Make the movement of the bird moving up less choppy and more smooth
-- Make the score system to count score by each claws past, instead of by how long the bird stays afloat before collision
+- Make the score system to count score by each claws past, instead of by how many second the bird stays afloat before collision
 - Make the claws appear in random frequency and random length
 
 
