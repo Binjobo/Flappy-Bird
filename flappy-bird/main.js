@@ -85,14 +85,15 @@ function moveClawsRightKey(e) {
         allClaws.style.left = xAxis + "px";
     }
 }
-     
-function clawsAutoMoveLeft(callback) {
+
+function clawsAutoMoveLeft() {
     function moveLeft() {
-        if (xAxis <= -4000) {
+        if (checkAllCollisions()) {               //YESSSSSSSSSSSSSSSSSSSSSSS!!!!!  
+            clearInterval(shiftLeftSpeed);
+        }else if (xAxis <= -4000) {
             clearInterval(shiftLeftSpeed);
             allClaws.style.left = 0;
             xAxis = 0;
-            callback();
         } else {
             xAxis -= 5;
             allClaws.style.left = xAxis + 'px';
@@ -101,17 +102,33 @@ function clawsAutoMoveLeft(callback) {
     const shiftLeftSpeed = setInterval(moveLeft, 15);
 }
 
-function repeatClawsRound(rounds) {
-    let counter = 0;
-    function callback() {
-        counter++;
-        if (counter < rounds) {
-            clawsAutoMoveLeft(callback);
-        }
-    }
-    clawsAutoMoveLeft(callback);
-    //referenced chatGPT examples
-}
+     
+// function clawsAutoMoveLeft(callback) {
+//     function moveLeft() {
+//         if (xAxis <= -4000) {
+//             clearInterval(shiftLeftSpeed);
+//             allClaws.style.left = 0;
+//             xAxis = 0;
+//             callback();
+//         } else {
+//             xAxis -= 5;
+//             allClaws.style.left = xAxis + 'px';
+//         }
+//     }
+//     const shiftLeftSpeed = setInterval(moveLeft, 15);
+// }
+
+// function repeatClawsRound(rounds) {
+//     let counter = 0;
+//     function callback() {
+//         counter++;
+//         if (counter < rounds) {
+//             clawsAutoMoveLeft(callback);
+//         }
+//     }
+//     clawsAutoMoveLeft(callback);
+//     //referenced chatGPT examples
+// }
 
 
 //collision
@@ -230,6 +247,7 @@ function checkAllCollisions() {
         // console.log("Oh yeahhhh");
         // document.querySelector("body").innerHTML = "Gameover!"
         gameOverScreen.style.display = "block";
+        return true;
         // started = false;
         // startScreen.style.display = "none";
 
@@ -276,7 +294,8 @@ function gameStart() {
         started = true;
         startScreen.style.display = "none";
         gravity();
-        repeatClawsRound(3); 
+        // repeatClawsRound(3); 
+        clawsAutoMoveLeft();
         setInterval(checkAllCollisions, 10);
     }
 }
@@ -286,8 +305,49 @@ function gameStart() {
 // }
 
 
+// function startOver() {
+//     if(started) {
+//         // started = false;
+//         // gameStart()
+//         console.log("Restart Game Now"); 
+//         // document.querySelector("body").innerHTML = "Gameover!"
+//         startScreen.style.display = "block";
+//     }
+// }
+
 function startOver() {
-    started = false;
-    // gameStart()
-    console.log("Restart Game"); 
+    if (started) {
+        xAxis = 0;
+        yAxis = 0;
+        started = false;
+
+        bird.style.top = yAxis + "px";
+
+        // Clear the existing interval
+        clearInterval(shiftLeftSpeed);
+
+        allClaws.style.left = 0;
+
+        gameOverScreen.style.display = "none";
+
+        startScreen.style.display = "block";
+    }
 }
+
+// function clawsStopMoving() {
+//     function stopMove() {
+//         if (checkAllCollisions() === true) {
+
+//         }
+//         if (xAxis <= -4000) {
+//             clearInterval(shiftLeftSpeed);
+//             allClaws.style.left = 0;
+//             xAxis = 0;
+//             callback();
+//         } else {
+//             xAxis -= 5;
+//             allClaws.style.left = xAxis + 'px';
+//         }
+//     }
+//     const shiftLeftSpeed = setInterval(stopMove, 15);
+// }
