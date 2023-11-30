@@ -89,7 +89,7 @@ You may also try the game out at https://flappy-bird-bobby.vercel.app/ ~
 
 ## Reference Material
 Some of the reference materials/websites/tools I have used in making this game:
-1. Stackoveflow (https://stackoverflow.com/questions/59510107/javascript-move-object-by-button-by-x-px)
+1. Stackoverflow (https://stackoverflow.com/questions/59510107/javascript-move-object-by-button-by-x-px)
 2. Mdn Web Docs (https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 3. Youtube (https://www.youtube.com/watch?v=_MyPLZSGS3s)
 4. ChatGPT 
