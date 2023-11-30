@@ -1,19 +1,13 @@
-# Making Flappy Bird 2.0
-
-<br>
+# Game - Flappy Bird 2.0
 
 ## Game Description 
 A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanics of this project would be largely the same as how you would expect a flappy bird game would run. Except that instead of pipes, now it's CLAWS!
-
-<br>
 
 ## Technologies used
 - HTML
 - CSS
 - JavaScript
 - Git & GitHub
-
-<br>
 
 ## Initial Game Blueprint
 ![image info](./flappy-bird/screenshots/Game%20Layout.png)
@@ -32,7 +26,7 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 2. Create and edit the html and CSS file
 3. Create and edit the Javascript file
 
-## 1. Settle the art and game objects
+## 1. Settle the game art and game objects
 - Import a free flappy bird sprite (https://opengameart.org/content/free-game-asset-grumpy-flappy-bird-sprite-sheets)
 - Used DALL-E to generate the art, and used Canva to modify the generated images.
 - Create a background image that has
@@ -94,7 +88,7 @@ You may also try the game out at https://flappy-bird-bobby.vercel.app/ ~
 <br>
 
 ## Reference Material
-Some of the reference materials/websites/tools I have used in making this game include
+Some of the reference materials/websites/tools I have used in making this game:
 1. Stackoveflow (https://stackoverflow.com/questions/59510107/javascript-move-object-by-button-by-x-px)
 2. Mdn Web Docs (https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 3. Youtube (https://www.youtube.com/watch?v=_MyPLZSGS3s)
