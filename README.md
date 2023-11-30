@@ -1,14 +1,19 @@
-# Goal 
-**Create a game of Flappy Bird using HTML, CSS and Javascript.**
+# Game 
+**Flappy Bird 2.0**
+
+<br>
+
+## Technologies used
+HTML, CSS and Javascript.
 
 <br>
 
 ## Game Description 
-A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanics of this project would be largely the same as how you would expect a fla ppy bird game would run. 
+A personal rendition of the classic mobile sensation "Flappy Bird"~ The mechanics of this project would be largely the same as how you would expect a flappy bird game would run. Except that instead of pipes, now it's CLAWS!
 
 <br>
 
-## Game Blueprint
+## Initial Game Blueprint
 ![image info](./flappy-bird/screenshots/Game%20Layout.png)
 
 <br>
@@ -16,23 +21,23 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 ## Minimum Viable Product (what I set out to achieve minimally)
 - The game is runnable with the background scene being able to scroll from right to left at a reasonable speed
 - There is gravity that pulls the bird down continuously
-- Tapping on Spacebar allows the bird to be lifted in height to "stay afloat"
+- Tapping on Spacebar or W key allows the bird to be lifted in height to "stay afloat"
 
 <br>
 
-## Execution Steps
-1. Settle the art and game objects
+## Getting Started (Execution Steps)
+1. Settle the game art and game objects
 2. Create and edit the html and CSS file
 3. Create and edit the Javascript file
 
 ## 1. Settle the art and game objects
-- Imported a free flappy bird sprite (https://opengameart.org/content/free-game-asset-grumpy-flappy-bird-sprite-sheets)
+- Import a free flappy bird sprite (https://opengameart.org/content/free-game-asset-grumpy-flappy-bird-sprite-sheets)
 - Used DALL-E to generate the art, and used Canva to modify the generated images.
 - Create a background image that has
     - Sky
     - Clouds
     - Cities
-- Created moving objects
+- Create moving objects
     - Claws (the equivalent of Pipe obstacles)
 
 ## 2. Create and edit the html and CSS file
@@ -46,7 +51,7 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 ## 3. Create and edit the Javascript file
 - Game Architecture
     - used the Model-View-Controller(MVC) approach
-    - this is the general code compartments for how the game is run
+    - this is the general code compartmentalization for how the game is run
         1. /*----- constants -----*/
         2. /*----- state variables -----*/
             - x position 
@@ -65,14 +70,14 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 
 <br>
 
-## What the game looks like
-**Game Start Screenshot**
+## Some screenshots of the game
+**Game Start Screen**
 ![image info](./flappy-bird/screenshots/GameStart%20Screen.png)
 
-**Game End Screenshot**
+**Game End Screen**
 ![image info](./flappy-bird/screenshots/GameOver%20Screen.png)
 
-You can try the game out at https://flappy-bird-bobby.vercel.app/ ~
+You may also try the game out at https://flappy-bird-bobby.vercel.app/ ~
 
 <br>
 
