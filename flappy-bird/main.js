@@ -100,7 +100,7 @@ function checkCollision(bird, claws) {
 
 function checkAllCollisions() {
     if (
-        bird.offsetTop >= groundCollisionHeight ||    
+        yAxis >= screenLowerBound ||    
         checkCollision(bird, clawDownLong) ||
         checkCollision(bird, clawUpShort) ||
         checkCollision(bird, clawDownShort) ||
