@@ -40,116 +40,113 @@ startOverButton.addEventListener("click", startOver);
 
 /*----- functions -----*/
 
-//bird 
+//bird
 function moveUpKey(e) {
-    if (checkAllCollisions()) {
-        return;
-    } else if (parseInt(bird.style.top) <= screenUpperBound) {
-        return;
-    } else if (e.keyCode === 87 || e.code === "Space") {
-        yAxis -= 30;
-        bird.style.top = yAxis + "px";
-    }
+  if (checkAllCollisions()) {
+    return;
+  } else if (parseInt(bird.style.top) <= screenUpperBound) {
+    return;
+  } else if (e.keyCode === 87 || e.code === "Space") {
+    yAxis -= 30;
+    bird.style.top = yAxis + "px";
+  }
 }
 
 function gravity() {
-    function drop() {
-        if (yAxis >= screenLowerBound) { 
-            clearInterval(dropSpeed); 
-        } else {
-            yAxis += 1;
-            bird.style.top = yAxis + 'px';
-        }
+  function drop() {
+    if (yAxis >= screenLowerBound) {
+      clearInterval(dropSpeed);
+    } else {
+      yAxis += 1;
+      bird.style.top = yAxis + "px";
     }
-    const dropSpeed = setInterval(drop, 3);    
+  }
+  const dropSpeed = setInterval(drop, 3);
 }
 
 //claws
 function clawsAutoScrollLeft() {
-    function scrollLeft() {
-        if (checkAllCollisions()) {
-            clearInterval(shiftLeftSpeed);
-        } else if (xAxis <= -4000) {
-            clearInterval(shiftLeftSpeed);
-            allClaws.style.left = 0 + "px";
-            xAxis = 0;
-            shiftLeftSpeed = setInterval(scrollLeft, scrollLeftSpeed);
-        } else {
-            xAxis -= 5; 
-            allClaws.style.left = xAxis + 'px';
-        }
+  function scrollLeft() {
+    if (checkAllCollisions()) {
+      clearInterval(shiftLeftSpeed);
+    } else if (xAxis <= -4000) {
+      clearInterval(shiftLeftSpeed);
+      allClaws.style.left = 0 + "px";
+      xAxis = 0;
+      shiftLeftSpeed = setInterval(scrollLeft, scrollLeftSpeed);
+    } else {
+      xAxis -= 5;
+      allClaws.style.left = xAxis + "px";
     }
- 
-    let shiftLeftSpeed = setInterval(scrollLeft, scrollLeftSpeed);
+  }
+
+  let shiftLeftSpeed = setInterval(scrollLeft, scrollLeftSpeed);
 }
 
 //collision
 function checkCollision(bird, claws) {
-    const birdSprite = bird.getBoundingClientRect();
-    const clawsPNG = claws.getBoundingClientRect();
+  const birdSprite = bird.getBoundingClientRect();
+  const clawsPNG = claws.getBoundingClientRect();
 
-    if (
-        birdSprite.left < clawsPNG.left + clawsPNG.width &&
-        birdSprite.left + birdSprite.width > clawsPNG.left &&
-        birdSprite.top < clawsPNG.top + clawsPNG.height &&
-        birdSprite.top + birdSprite.height > clawsPNG.top
-    ) {
-        return true;
-    }
+  if (
+    birdSprite.left < clawsPNG.left + clawsPNG.width &&
+    birdSprite.left + birdSprite.width > clawsPNG.left &&
+    birdSprite.top < clawsPNG.top + clawsPNG.height &&
+    birdSprite.top + birdSprite.height > clawsPNG.top
+  ) {
+    return true;
+  }
 }
 
 function checkAllCollisions() {
-    if (
-        yAxis >= screenLowerBound ||    
-        checkCollision(bird, clawDownLong) ||
-        checkCollision(bird, clawUpShort) ||
-        checkCollision(bird, clawDownShort) ||
-        checkCollision(bird, clawUpLong) ||
-        checkCollision(bird, clawPair3) ||
-        checkCollision(bird, clawPair4)
-    ) {
-        gameOverScreen.style.display = "block"; 
-        return true;
-    }
+  if (
+    yAxis >= screenLowerBound ||
+    checkCollision(bird, clawDownLong) ||
+    checkCollision(bird, clawUpShort) ||
+    checkCollision(bird, clawDownShort) ||
+    checkCollision(bird, clawUpLong) ||
+    checkCollision(bird, clawPair3) ||
+    checkCollision(bird, clawPair4)
+  ) {
+    gameOverScreen.style.display = "block";
+    return true;
+  }
 }
 
 //score
 function scoreCount() {
-    let scoreTimer;      
-    clearInterval(scoreTimer);
+  let scoreTimer;
+  clearInterval(scoreTimer);
 
-    function countingScore() {
-        if (checkAllCollisions()) {
-            clearInterval(scoreTimer);
-        } else {
-            scores.innerText = parseInt(scores.innerText) + 1;
-        }
+  function countingScore() {
+    if (checkAllCollisions()) {
+      clearInterval(scoreTimer);
+    } else {
+      scores.innerText = parseInt(scores.innerText) + 1;
     }
-    scoreTimer = setInterval(countingScore, 1000);
+  }
+  scoreTimer = setInterval(countingScore, 1000);
 }
 
 //start game
 function gameStart() {
-    if(!started) {
-        started = true;
-        startScreen.style.display = "none";
-        gravity();
-        clawsAutoScrollLeft();
-        setInterval(checkAllCollisions, 10);
-        scoreCount();
-    }
+  if (!started) {
+    started = true;
+    startScreen.style.display = "none";
+    gravity();
+    clawsAutoScrollLeft();
+    setInterval(checkAllCollisions, 10);
+    scoreCount();
+  }
 }
 
 //restart game
 function startOver() {
-        xAxis = 0;
-        yAxis = 0;
-        started = false;
-        bird.style.top = yAxis + "px";
-        allClaws.style.left = 0;
-        gameOverScreen.style.display = "none";
-        scores.innerText = 0;
+  xAxis = 0;
+  yAxis = 0;
+  started = false;
+  bird.style.top = yAxis + "px";
+  allClaws.style.left = 0;
+  gameOverScreen.style.display = "none";
+  scores.innerText = 0;
 }
-
-
-
