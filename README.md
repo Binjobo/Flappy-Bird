@@ -15,13 +15,12 @@ A personal rendition of the classic mobile sensation "Flappy Bird"! The mechanic
 
 ![image info](./flappy-bird/screenshots/Game%20Layout.png)
 
-<br>
-
 ## Minimum Viable Product (what I set out to achieve minimally)
 
 - The game is runnable with the obstacle game objects being able to scroll from right to left at a reasonable speed
 - There is gravity that pulls the bird down continuously
 - Tapping on Spacebar or W key allows the bird to be lifted by a certain height to "stay afloat"
+- Detect collision when the bird hits the obstacles or the ground, which then triggers Game Over
 
 <br>
 
